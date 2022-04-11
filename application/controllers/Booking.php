@@ -78,11 +78,11 @@ class Booking extends CI_Controller {
         $databooking = $this->db->query("SELECT * FROM booking
                                          WHERE id_user = '$userid'")->num_rows();
         
-        if ($databooking > 0) {
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role"alert">Masih ada booking buku sebelumnya yang belum diambil.<br>Ambil buku yang dibooking atau tunggu 1x24 jam untuk bisa dibooking kembali </div>');
+        //if ($databooking > 0) {
+        //    $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role"alert">Masih ada booking buku sebelumnya yang belum diambil.<br>Ambil buku yang dibooking atau tunggu 1x24 jam untuk bisa dibooking kembali </div>');
 
-            redirect(base_url());
-        }
+        //    redirect(base_url());
+        //}
 
         //jika buku yang diklik booking sudah ada dikeranjang
         if ($temp > 0) {
